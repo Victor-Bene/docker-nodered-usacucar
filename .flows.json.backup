@@ -1,0 +1,916 @@
+[
+    {
+        "id": "a165f754b18c2119",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ce9de74d0c91d797",
+        "type": "tab",
+        "label": "Example",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7767ae6264f855d1",
+        "type": "group",
+        "z": "ce9de74d0c91d797",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "52b008d763c0cbd0",
+            "10b3a44c60cf663d",
+            "dd2413dd89673d31",
+            "52ad5e94a0436974",
+            "90d9d1fd18688526"
+        ],
+        "x": 74,
+        "y": 259,
+        "w": 572,
+        "h": 162
+    },
+    {
+        "id": "0bd884ea091f535a",
+        "type": "group",
+        "z": "ce9de74d0c91d797",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "34064f5b851de2e7",
+            "ddfc9d25e6340a2f",
+            "57e4f1d1cb1394b5",
+            "2c813bdd55de77ec",
+            "f4332b9ccdf3cd3d"
+        ],
+        "x": 74,
+        "y": 459,
+        "w": 572,
+        "h": 162
+    },
+    {
+        "id": "24a23fbda23375b0",
+        "type": "oracle-config",
+        "name": "hr",
+        "host": "localhost/XE",
+        "port": "1521",
+        "database": "hr",
+        "user": "hr",
+        "password": "hr",
+        "mode": "thick",
+        "instantClient": "D:/instantclient_21_15/network/admin"
+    },
+    {
+        "id": "6db9f77a6008c6c3",
+        "type": "oracle-config",
+        "name": "oracle-connection",
+        "host": "localhost",
+        "port": "1521",
+        "database": "orcl",
+        "user": "oracle",
+        "password": "oracle",
+        "mode": "thick",
+        "instantClient": "D:/instantclient_21_15"
+    },
+    {
+        "id": "269867df06f4f671",
+        "type": "oracle-server",
+        "connectionname": "hr",
+        "tnsname": "hr",
+        "connectiontype": "TNS Name",
+        "instantclientpath": "D:/instantclient_21_15",
+        "host": "",
+        "port": "",
+        "reconnect": true,
+        "reconnecttimeout": "5000",
+        "db": ""
+    },
+    {
+        "id": "ec68b70a38aefb78",
+        "type": "oracle-server",
+        "connectionname": "Connection Name",
+        "tnsname": "TESTDB",
+        "connectiontype": "TNS Name",
+        "instantclientpath": "F:\\instantclient_21_9",
+        "host": "",
+        "port": "",
+        "reconnect": true,
+        "reconnecttimeout": "5000",
+        "db": ""
+    },
+    {
+        "id": "a24f1d7983ba59fb",
+        "type": "eth-ip endpoint",
+        "address": "192.168.237.110",
+        "slot": "0",
+        "cycletime": "200",
+        "name": "Contrologix Cristaliza",
+        "vartable": {
+            "": {
+                "PurezaIn": {
+                    "type": "REAL"
+                },
+                "Y_SP": {
+                    "type": "REAL"
+                },
+                "BRIX_XAROPE": {
+                    "type": "REAL"
+                },
+                "BRIX_MEL": {
+                    "type": "REAL"
+                },
+                "PUREZA_XAROPE": {
+                    "type": "REAL"
+                },
+                "PUREZA_MEL": {
+                    "type": "REAL"
+                },
+                "PERC_VOL_MEL": {
+                    "type": "REAL"
+                },
+                "PERC_VOL_XAROPE": {
+                    "type": "REAL"
+                },
+                "START_ENCHIMENTO": {
+                    "type": "BOOL"
+                },
+                "START_CONTROLE": {
+                    "type": "BOOL"
+                },
+                "ABRE_VALV_MEL": {
+                    "type": "BOOL"
+                },
+                "ABRE_VALV_XAROPE": {
+                    "type": "BOOL"
+                },
+                "Y_Start": {
+                    "type": "REAL"
+                },
+                "ABRE_VALV_SEMENTE": {
+                    "type": "BOOL"
+                },
+                "Y_CLP": {
+                    "type": "REAL"
+                },
+                "SP_BRIX_CLP": {
+                    "type": "REAL"
+                },
+                "VALV_BRIX": {
+                    "type": "REAL"
+                },
+                "VALV_TEMP": {
+                    "type": "REAL"
+                }
+            }
+        }
+    },
+    {
+        "id": "21b986bf7950d0e4",
+        "type": "eth-ip endpoint",
+        "address": "192.168.237.110",
+        "slot": "0",
+        "cycletime": "200",
+        "name": "ControlLogix Enchimento",
+        "vartable": {
+            "": {
+                "BRIX_XAROPE": {
+                    "type": "REAL"
+                },
+                "BRIX_MEL": {
+                    "type": "REAL"
+                },
+                "PUREZA_XAROPE": {
+                    "type": "REAL"
+                },
+                "PUREZA_MEL": {
+                    "type": "REAL"
+                }
+            }
+        }
+    },
+    {
+        "id": "53eabe79b0854fcc",
+        "type": "eth-ip endpoint",
+        "address": "192.168.237.110",
+        "slot": "0",
+        "cycletime": "200",
+        "name": "ControlLogix Online",
+        "vartable": {
+            "": {
+                "TempIn": {
+                    "type": "REAL"
+                },
+                "BrixIn": {
+                    "type": "REAL"
+                },
+                "NivelIn": {
+                    "type": "REAL"
+                },
+                "PurezaIn": {
+                    "type": "REAL"
+                }
+            }
+        }
+    },
+    {
+        "id": "1002aa28af3f4a15",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://192.168.237.106:4840",
+        "secpol": "Basic256Sha256",
+        "secmode": "SignAndEncrypt",
+        "none": false,
+        "login": true,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "d23de00a1651b396",
+        "type": "inject",
+        "z": "a165f754b18c2119",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "{\"fname\":\"Nitisak\",\"lname\":\"Chancham\",\"age\":37,\"nickname\":\"North\"}",
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [
+                "3c42c4a18435fadb"
+            ]
+        ]
+    },
+    {
+        "id": "58914dacd9698837",
+        "type": "debug",
+        "z": "a165f754b18c2119",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "3c42c4a18435fadb",
+        "type": "oracle-exec",
+        "z": "a165f754b18c2119",
+        "name": "",
+        "usequery": false,
+        "prepare": false,
+        "error": "error",
+        "remove": true,
+        "query": [
+            {
+                "sql": "SELECT *\nFROM (\n    SELECT *\n    FROM hr.departments\n    ORDER BY department_id DESC\n)\nWHERE ROWNUM = 1",
+                "name": "payload",
+                "param": {
+                    "type": "wop",
+                    "value": ""
+                }
+            }
+        ],
+        "server": "269867df06f4f671",
+        "resultaction": "single",
+        "x": 640,
+        "y": 240,
+        "wires": [
+            [
+                "58914dacd9698837"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e522e6da0679f2b5",
+        "type": "eth-ip out",
+        "z": "a165f754b18c2119",
+        "endpoint": "a24f1d7983ba59fb",
+        "variable": "PERC_VOL_MEL",
+        "program": "",
+        "name": "PERC_VOL_MEL",
+        "x": 1350,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "aef48faff29c69b6",
+        "type": "eth-ip in",
+        "z": "a165f754b18c2119",
+        "endpoint": "21b986bf7950d0e4",
+        "mode": "all",
+        "variable": "",
+        "program": "",
+        "name": "[BRIX_XAROPE,BRIX_MEL,PUREZA_XAROPE,PUREZA_MEL,PurezaIn]]",
+        "x": 340,
+        "y": 420,
+        "wires": [
+            [
+                "a1e3fc7c82f52395"
+            ]
+        ]
+    },
+    {
+        "id": "a1e3fc7c82f52395",
+        "type": "function",
+        "z": "a165f754b18c2119",
+        "name": "Barra/null",
+        "func": "msg.payload = [msg.payload.BRIX_XAROPE, msg.payload.BRIX_MEL, msg.payload.PUREZA_XAROPE, msg.payload.PUREZA_MEL, msg.payload.PurezaIn];\n\n// Verifica se todos os valores no array são diferentes de nulo\nvar todosNaoNulos = msg.payload.every(function (valor) {\n    return valor !== null;\n});\n\n// Se todos os valores forem diferentes de nulo, retorna a mensagem\nif (todosNaoNulos) {\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "0538c004855e4e6b"
+            ]
+        ]
+    },
+    {
+        "id": "0538c004855e4e6b",
+        "type": "function",
+        "z": "a165f754b18c2119",
+        "name": "function 8",
+        "func": "msg.topic = {\n    \"did\":msg.payload[0],\"mid\":120, \"lid\":1700};\nmsg.topic = JSON.stringify(msg.topic);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 620,
+        "wires": [
+            [
+                "83b8157bdbd0ac87"
+            ]
+        ]
+    },
+    {
+        "id": "ab05fbf9cadf5599",
+        "type": "debug",
+        "z": "a165f754b18c2119",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "topic",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "9a0033f72b676793",
+        "type": "oracle-exec",
+        "z": "a165f754b18c2119",
+        "name": "",
+        "usequery": true,
+        "prepare": false,
+        "error": "error",
+        "remove": true,
+        "query": [
+            {
+                "sql": "INSERT INTO HR.DEPARTMENTS (DEPARTMENT_ID, MANAGER_ID, LOCATION_ID)\nVALUES ( :did, :mid, :lid)",
+                "name": "payload",
+                "param": {
+                    "type": "msg",
+                    "value": "topic"
+                }
+            }
+        ],
+        "server": "269867df06f4f671",
+        "resultaction": "single",
+        "x": 1260,
+        "y": 620,
+        "wires": [
+            [
+                "ab05fbf9cadf5599"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6245ce0da43433cf",
+        "type": "oracle-exec",
+        "z": "a165f754b18c2119",
+        "name": "",
+        "usequery": true,
+        "prepare": false,
+        "error": "error",
+        "remove": true,
+        "query": [
+            {
+                "sql": "INSERT INTO HR.REGIONS (REGION_ID, REGION_NAME)\nVALUES (:regiaoid, :regiaoidnome)",
+                "name": "payload",
+                "param": {
+                    "type": "msg",
+                    "value": "topic"
+                }
+            }
+        ],
+        "server": "269867df06f4f671",
+        "resultaction": "single",
+        "x": 980,
+        "y": 800,
+        "wires": [
+            [
+                "ab05fbf9cadf5599"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1ece4953d3efe620",
+        "type": "inject",
+        "z": "a165f754b18c2119",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "{\"regiaoid\":13,\"regiaoidnome\":\"assa\"}",
+        "x": 690,
+        "y": 920,
+        "wires": [
+            [
+                "01da818c67ca677d"
+            ]
+        ]
+    },
+    {
+        "id": "01da818c67ca677d",
+        "type": "json",
+        "z": "a165f754b18c2119",
+        "name": "",
+        "property": "topic",
+        "action": "obj",
+        "pretty": false,
+        "x": 830,
+        "y": 860,
+        "wires": [
+            [
+                "6245ce0da43433cf"
+            ]
+        ]
+    },
+    {
+        "id": "5c4295fe196e8f51",
+        "type": "oracle-exec",
+        "z": "a165f754b18c2119",
+        "name": "",
+        "usequery": true,
+        "prepare": false,
+        "error": "error",
+        "remove": true,
+        "query": [
+            {
+                "sql": "INSERT INTO HR.DEPARTMENTS (DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID)\nVALUES (:DEPARTMENT_ID, :DEPARTMENT_NAME, :MANAGER_ID, :LOCATION_ID)",
+                "name": "payload",
+                "param": {
+                    "type": "wop",
+                    "value": ""
+                }
+            }
+        ],
+        "server": "269867df06f4f671",
+        "resultaction": "single",
+        "x": 1640,
+        "y": 620,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d9ac34fce9b06a03",
+        "type": "delay",
+        "z": "a165f754b18c2119",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "3",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1080,
+        "y": 620,
+        "wires": [
+            [
+                "9a0033f72b676793",
+                "ab05fbf9cadf5599"
+            ]
+        ]
+    },
+    {
+        "id": "83b8157bdbd0ac87",
+        "type": "json",
+        "z": "a165f754b18c2119",
+        "name": "",
+        "property": "topic",
+        "action": "obj",
+        "pretty": false,
+        "x": 930,
+        "y": 620,
+        "wires": [
+            [
+                "d9ac34fce9b06a03"
+            ]
+        ]
+    },
+    {
+        "id": "52b008d763c0cbd0",
+        "type": "inject",
+        "z": "ce9de74d0c91d797",
+        "g": "7767ae6264f855d1",
+        "name": "",
+        "props": [
+            {
+                "p": "param",
+                "v": "{\"fname\":\"Nitisak\",\"lname\":\"Chancham\"}",
+                "vt": "json"
+            },
+            {
+                "p": "paramNotUse",
+                "v": "{\"fname\":\"Nitisak\",\"lname\":\"Chancham\",\"age\":37,\"nickname\":\"North\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "10b3a44c60cf663d"
+            ]
+        ]
+    },
+    {
+        "id": "10b3a44c60cf663d",
+        "type": "oracle-exec",
+        "z": "ce9de74d0c91d797",
+        "g": "7767ae6264f855d1",
+        "name": "",
+        "usequery": true,
+        "prepare": false,
+        "error": "error",
+        "remove": true,
+        "query": [
+            {
+                "sql": "SELECT * \nFROM SCHEMA_NAME.EMPLOYEE\nWHERE EMP_FNAME = :fname\nAND EMP_LNAME - :lname",
+                "name": "result1",
+                "param": {
+                    "type": "msg",
+                    "value": "param"
+                }
+            },
+            {
+                "sql": "SELECT * \nFROM SCHEMA_NAME.EMPLOYEE\nWHERE NICKNAME= :nickname",
+                "name": "result2",
+                "param": {
+                    "type": "msg",
+                    "value": "paramNotUse"
+                }
+            }
+        ],
+        "server": "ec68b70a38aefb78",
+        "resultaction": "single",
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "dd2413dd89673d31"
+            ],
+            [
+                "52ad5e94a0436974"
+            ]
+        ]
+    },
+    {
+        "id": "dd2413dd89673d31",
+        "type": "debug",
+        "z": "ce9de74d0c91d797",
+        "g": "7767ae6264f855d1",
+        "name": "Result Data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "52ad5e94a0436974",
+        "type": "debug",
+        "z": "ce9de74d0c91d797",
+        "g": "7767ae6264f855d1",
+        "name": "Error message",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "error",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "90d9d1fd18688526",
+        "type": "comment",
+        "z": "ce9de74d0c91d797",
+        "g": "7767ae6264f855d1",
+        "name": "Select with parameter",
+        "info": "",
+        "x": 220,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "34064f5b851de2e7",
+        "type": "inject",
+        "z": "ce9de74d0c91d797",
+        "g": "0bd884ea091f535a",
+        "name": "",
+        "props": [
+            {
+                "p": "single",
+                "v": "{\"fname\":\"Nitisak\",\"lname\":\"Chancham\",\"age\":37,\"nickname\":\"North\"}",
+                "vt": "json"
+            },
+            {
+                "p": "mutil",
+                "v": "[{\"fname\":\"Nitisak\",\"lname\":\"Chancham\",\"age\":37,\"nickname\":\"North\"},{\"fname\":\"Taveesak\",\"lname\":\"Chancham\",\"age\":67,\"nickname\":\"Ood\"},{\"fname\":\"Nitaya\",\"lname\":\"Chancham\",\"age\":65,\"nickname\":\"Nid\"}]",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 560,
+        "wires": [
+            [
+                "ddfc9d25e6340a2f"
+            ]
+        ]
+    },
+    {
+        "id": "ddfc9d25e6340a2f",
+        "type": "oracle-exec",
+        "z": "ce9de74d0c91d797",
+        "g": "0bd884ea091f535a",
+        "name": "",
+        "usequery": true,
+        "prepare": false,
+        "error": "error",
+        "remove": true,
+        "query": [
+            {
+                "sql": "INSERT INTO SCHEMA_NAME.EMPLOYEE (EMP_FNAME, EMP_LNAME, EMP_AGE, NICKNAME)\nVALUES (:fname, :lname, :age, :nickname)",
+                "name": "result1",
+                "param": {
+                    "type": "msg",
+                    "value": "single"
+                }
+            },
+            {
+                "sql": "INSERT INTO SCHEMA_NAME.EMPLOYEE (EMP_FNAME, EMP_LNAME, EMP_AGE, NICKNAME)\nVALUES (:fname, :lname, :age, :nickname)",
+                "name": "result2",
+                "param": {
+                    "type": "msg",
+                    "value": "multi"
+                }
+            }
+        ],
+        "server": "ec68b70a38aefb78",
+        "resultaction": "single",
+        "x": 320,
+        "y": 560,
+        "wires": [
+            [
+                "57e4f1d1cb1394b5"
+            ],
+            [
+                "2c813bdd55de77ec"
+            ]
+        ]
+    },
+    {
+        "id": "57e4f1d1cb1394b5",
+        "type": "debug",
+        "z": "ce9de74d0c91d797",
+        "g": "0bd884ea091f535a",
+        "name": "Result Data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "2c813bdd55de77ec",
+        "type": "debug",
+        "z": "ce9de74d0c91d797",
+        "g": "0bd884ea091f535a",
+        "name": "Error message",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "error",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "f4332b9ccdf3cd3d",
+        "type": "comment",
+        "z": "ce9de74d0c91d797",
+        "g": "0bd884ea091f535a",
+        "name": "Insert with parameter",
+        "info": "",
+        "x": 220,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "c52cdec8293d64f6",
+        "type": "inject",
+        "z": "ce9de74d0c91d797",
+        "name": "Simple",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "c061649673ee8454"
+            ]
+        ]
+    },
+    {
+        "id": "c061649673ee8454",
+        "type": "oracle-exec",
+        "z": "ce9de74d0c91d797",
+        "name": "",
+        "usequery": true,
+        "prepare": false,
+        "error": "error",
+        "remove": false,
+        "query": [
+            {
+                "sql": "SELECT * \nFROM SCHEMA_NAME.TABLE_NAME_A\nWHERE 1 = 1",
+                "name": "tableA",
+                "param": {
+                    "type": "wop",
+                    "value": ""
+                }
+            },
+            {
+                "sql": "SELECT * \nFROM SCHEMA_NAME.TABLE_NAME_B\nWHERE 1 = 1",
+                "name": "tableB",
+                "param": {
+                    "type": "wop",
+                    "value": ""
+                }
+            }
+        ],
+        "server": "ec68b70a38aefb78",
+        "resultaction": "single",
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "308a1c4b5aaee5dc"
+            ],
+            [
+                "721d79c896909a98"
+            ]
+        ]
+    },
+    {
+        "id": "308a1c4b5aaee5dc",
+        "type": "debug",
+        "z": "ce9de74d0c91d797",
+        "name": "Result Data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "721d79c896909a98",
+        "type": "debug",
+        "z": "ce9de74d0c91d797",
+        "name": "Error message",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "error",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "57334808a0ee7685",
+        "type": "comment",
+        "z": "ce9de74d0c91d797",
+        "name": "Simple",
+        "info": "",
+        "x": 170,
+        "y": 100,
+        "wires": []
+    }
+]
