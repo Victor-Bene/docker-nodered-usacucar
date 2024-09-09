@@ -73,14 +73,14 @@ module.exports = {
     /** To password protect the Node-RED editor and admin API, the following
      * property can be used. See https://nodered.org/docs/security.html for details.
      */
-    adminAuth: {
-        type: "credentials",
-        users: [{
-            username: "admin",
-            password: "$2y$08$AQ.JO2VzWY5XiTtR/ntHBu2dC94ur12U8MsPcIvfrH3NNV3ETRQRu",
-            permissions: "*"
-        }]
-    },
+    //adminAuth: {
+        //type: "credentials",
+        //users: [{
+            //username: "admin",
+            //password: "$2y$08$AQ.JO2VzWY5XiTtR/ntHBu2dC94ur12U8MsPcIvfrH3NNV3ETRQRu",
+            //permissions: "*"
+        //}]
+    //},
 
     /** The following property can be used to enable HTTPS
      * This property can be either an object, containing both a (private) key
@@ -90,10 +90,10 @@ module.exports = {
      */
 
     /** Option 1: static object */
-    https: {
-      key: require("fs").readFileSync('nodered.key'),
-      cert: require("fs").readFileSync('Integrautoma.crt')
-    },
+    //https: {
+      //key: require("fs").readFileSync('nodered.key'),
+      //cert: require("fs").readFileSync('Integrautoma.crt')
+    //},
 
 
 
@@ -116,7 +116,7 @@ module.exports = {
     /** The following property can be used to cause insecure HTTP connections to
      * be redirected to HTTPS.
      */
-    requireHttps: true,
+    //requireHttps: true,
 
     /** To password protect the node-defined HTTP endpoints (httpNodeRoot),
      * including node-red-dashboard, or the static content (httpStatic), the
